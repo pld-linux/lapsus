@@ -11,6 +11,7 @@ Group:		X11/Applications
 Source0:	%{name}-%{snap}.tar.bz2
 # Source0-md5:	e68eb1dc0d8ad1a7389600c85a9fbde6
 Patch0:		%{name}-as_needed.patch
+Patch1:		kde-ac260-lt.patch
 URL:		http://lapsus.berlios.de/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -38,6 +39,7 @@ Thinkpad ACPI Extras oraz urządzenie NVRAM.
 %prep
 %setup -q -n %{name}
 %patch0 -p1
+%patch1 -p1
 
 %build
 # update config.sub for amd64
