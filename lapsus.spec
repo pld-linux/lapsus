@@ -1,8 +1,8 @@
 # TODO:
 # - fix install (kicker applets are installed into wrong dir)
 %define snap	20070916
-Summary:	Lapsus - linux on laptops
-Summary(pl.UTF-8):	Lapsus - linux na laptopach
+Summary:	Lapsus - Linux on laptops
+Summary(pl.UTF-8):	Lapsus - Linux na laptopach
 Name:		lapsus
 Version:	0.0.5
 Release:	0.1
@@ -31,10 +31,10 @@ device.
 %description -l pl.UTF-8
 Lapsus to zestaw narzędzi umożliwiających łatwy dostęp do
 funkcjonalności udostępnianej przez laptopy. Aktualnie wspierana jest
-wiekszość z funkcjonalności modułu jądra asus-laptop, np. dodatkowe
-diody LED, przyciski, kontrola jasności matrycy, itd. Lapsus wspiera
-też niektóre z możliwości laptopów IBM udostępnione przez moduł IBM
-Thinkpad ACPI Extras oraz urządzenie NVRAM.
+wiekszość z funkcjonalności modułu jądra asus-laptop: dodatkowe
+diody LED, przyciski, sterowanie podświetleniem matrycy itp. Lapsus
+obsługuje też niektóre z funkcji laptopów IBM-a udostępnione przez
+moduł IBM Thinkpad ACPI Extras oraz urządzenie NVRAM.
 
 %prep
 %setup -q -n %{name}
@@ -76,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_sbindir}/lapsusd
-%{_datadir}/apps/kicker/applets/*.desktop
 %{_libdir}/kde3/lapsus_panelapplet.la
 %attr(755,root,root) %{_libdir}/kde3/lapsus_panelapplet.so
 %{_datadir}/apps/%{name}
+%{_datadir}/apps/kicker/applets/*.desktop
